@@ -2,11 +2,14 @@
 import './App.css';
 import { Copernicus } from './components/Copernicus';
 import { CrewmanList } from './components/CrewmanList';
+import { Status } from './components/Status';
+import { Heading } from './components/Heading';
+import { Banana } from './components/Banana';
 
 function App() {
   const crewmanList = [
     {
-      alias: 'G.0.A.T.',
+      alias: 'The Dark Knight of Mars',
       real: 'Isaac Asimov',
     },
     {
@@ -20,11 +23,21 @@ function App() {
   ]
   return (
     <div className='App'>
-      <Copernicus name='˚　　　　✦　🪐　　.　　. 　 ˚　.　　　　 🌀　 . ✦　　　 　˚　　　　 .
+
+      <Status status='loading'/>
+      <Heading>
+        <Copernicus name='˚　　　　✦　🪐　　.　　. 　 ˚　.　　　　 🌀　 . ✦　　　 　˚　　　　 .
 　🚀　　.   　　˚　　 　　*　　 　　✦　　　.　　.　　　✦　˚ 　☄️ 　　　 ˚🌒　.˚　　　　✦　　　.　　. 　 ˚　.　　　　 　　 　🌀　　　 ✦　　.　
 ' upcomingLaunchDate={new Date()}
 isCopernicus={false}/>
+      </Heading>
+
       <CrewmanList names={crewmanList}/>
+
+      <Banana handleClick={() => {
+        console.log('banana got')
+      }}
+      />
     </div>
   );
 }

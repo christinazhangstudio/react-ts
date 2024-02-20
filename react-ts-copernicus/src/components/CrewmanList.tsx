@@ -8,11 +8,11 @@ type CrewmanListProps = {
 export const CrewmanList = (props: CrewmanListProps) => {
     return (
         <div>
-            <h2>Confirmed crewman:</h2>
+            <h4>Confirmed crewman:</h4>
             {props.names.map(name => {
                 return (
                     <div>
-                        <h3 key={name.alias}>{name.alias}</h3>
+                        <h5 key={name.alias}>{name.alias}</h5>
                         <p key={name.real}>{name.real}</p>
                     </div>
                 )

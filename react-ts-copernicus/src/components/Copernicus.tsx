@@ -2,6 +2,7 @@ type CopernicusProps = {
     name: string
     upcomingLaunchDate: Date
     isCopernicus: boolean
+    specialMessage?: string // optional type
 } // this defines the type of props that the component will receive
 
 // Copernicus is a global script file
@@ -11,7 +12,7 @@ export const Copernicus = (props: CopernicusProps) => {
     return (
         <div>
             <h2>{props.name}</h2>
-            <h2>{new String(props.upcomingLaunchDate)}</h2>
+            <h2>{String(props.upcomingLaunchDate)}</h2>
             <h3>
                 {
                     props.isCopernicus ? 'Copernicus to '+houstonText : houstonText

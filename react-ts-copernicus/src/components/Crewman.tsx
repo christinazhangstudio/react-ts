@@ -5,11 +5,12 @@ type CrewmanProps = {
     }
 }
 
+// not used over preference for CrewmanList
 export const Crewman = (props: CrewmanProps) => {
     return (
         <div>
-            <h2>Confirmed crewman:</h2>
-            <h3>{props.name.alias}</h3>
+            <h5>Confirmed crewman:</h5>
+            <p>{props.name.alias}</p>
             <p>{props.name.real}</p>
         </div>
     )
