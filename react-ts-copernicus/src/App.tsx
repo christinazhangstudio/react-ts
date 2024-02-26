@@ -2,7 +2,7 @@
 import './App.css';
 import { Copernicus } from './components/Copernicus';
 import { CrewmanList } from './components/CrewmanList';
-import { Status } from './components/Status';
+//import { Status } from './components/Status';
 import { Heading } from './components/Heading';
 import { Banana } from './components/Banana';
 //import { Input } from './components/Input';
@@ -10,6 +10,8 @@ import { Container } from './components/Container';
 import { Counter } from './components/state/Counter';
 import { ThemeContextProvider } from "./components/context/ThemeContext"
 import { ThemeRenderer } from "./components/context/ThemeRenderer"
+import { UserContextProvider } from "./components/context/UserContext"
+import { User } from "./components/context/User"
 
 function App() {
   const crewmanList = [
@@ -38,6 +40,11 @@ function App() {
 ' upcomingLaunchDate={new Date()}
 isCopernicus={false}/>
         </Heading>
+
+       {/* context always created outside of component, but future value in actual component */}
+        <UserContextProvider>
+          <User />
+        </UserContextProvider>  
 
         <CrewmanList names={crewmanList}/>
 
