@@ -1,8 +1,13 @@
+import { Name } from './Crewman.types'
+
 type CrewmanListProps = {
-    names: {
-        alias: string
-        real: string
-    }[]
+    //names: {
+        // alias: string
+        // real: string
+    //}[]
+
+    // now that Name has been exported as a type...
+    names: Name[]
 }
 
 export const CrewmanList = (props: CrewmanListProps) => {

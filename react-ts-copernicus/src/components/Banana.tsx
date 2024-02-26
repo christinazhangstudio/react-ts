@@ -1,10 +1,19 @@
 type BananaProps = {
+    // property handleClick, which doesn't have to
+    // accept a parameter or return a value.
+    // e.g. you can use this to impl a function 
+    // for where it's called with simply console.log()
     //handleClick: () => void
-    handleClick: (event: React.MouseEvent<HTMLButtonElement>) => void // more specific
+    
+    // whereas you can also be more specific and take in an event
+    //handleClick: (event: React.MouseEvent<HTMLButtonElement>) => void
+   
+    // can also add in another param, id
+    handleClick: (event: React.MouseEvent<HTMLButtonElement>, id: number) => void
 }
 
 export const Banana = (props: BananaProps) => {
-    return <button onClick={props.handleClick}>Get banana.</button>
+    return <button onClick={event => props.handleClick(event, 1)}>help</button>
 }
 
 // 'Monkey, help Space Force. Get banana.'
