@@ -16,4 +16,4 @@ Session storage:
 - NOT send with requests (so only on browser)
 - accessible on same tab
 
-`Dev Tools > Application ` to view
+`Dev Tools > Application` to view
